@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <center><h1>Home Page</h1></center>
+    <h2>Hello, {{nm}} </h2>
+    <h3>Your age is: {{age}}</h3>
+    <hr>
+
+    
+    {% if age>=18 %}
+        <h3 style="color: red;">You are eligible for Unemployeement</h3>
+    {% else %}
+       <h3 style="color:  green;">Your not eligible to Vote</h3>
+    {% endif %}
+{% endblock content %}
+    

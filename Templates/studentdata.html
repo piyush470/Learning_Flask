@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock style %}
+    
+{% block content %}
+<center>
+    <h1>Student Information</h1>
+</center>
+
+{% for i in dt %}
+<h4>Hello, {{i}} </h4>
+{% endfor %}
+
+<hr>
+<img src="{{url_for('static',filename='images/img1.png')}}" alt="" style="height: 50vh;">
+<hr>
+
+{% for i in list %}
+<h4>Name: {{i.name}}</h4>
+<h4>Age: {{i.age}}</h4>
+<h4>Address: {{i.address}}</h4>
+<h4>Marks: {{i.Marks}}</h4>
+<hr>
+{% endfor %}
+
+{% endblock content %}
